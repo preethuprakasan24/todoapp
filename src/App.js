@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Helmet } from 'react-helmet';
 import Todo from './component/Todo/Todo'
 import Header from './component/Header/Header'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -9,31 +8,16 @@ class App extends Component {
   render() {
     return (
       <>
-        <Helmet>
-          <meta
-            http-equiv="Content-Security-Policy"
-            content="
-            default-src 'self';
-            script-src 'self' 'unsafe-inline';
-            style-src 'self' 'unsafe-inline' 'https://fonts.googleapis.com' 'https://fonts.gstatic.com';
-            font-src 'self' 'https://fonts.googleapis.com' 'https://fonts.gstatic.com';
-            "
-          />
-        </Helmet>
         <Router>
           <Header />
           <Routes>
-            <Route path='/' exact Component={Todo} />
-            <Route path='/about' Component={About} />
-          </Routes >
+            <Route path='/TO-DO-APP' exact element={<Todo />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
         </Router>
-
       </>
-    )
-
-
-
+    );
   }
 }
 
-export default App
+export default App;
