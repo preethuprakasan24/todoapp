@@ -11,7 +11,7 @@ class App extends Component {
         <Router>
           <Header />
           <Routes>
-            <Route path='/TO-DO-APP' exact element={<Todo />} />
+            <Route path='/todoapp' exact element={<Todo />} />
             <Route path='/about' element={<About />} />
           </Routes>
         </Router>
